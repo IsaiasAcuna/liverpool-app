@@ -1,8 +1,8 @@
-#⚽ Liverpool App
+# ⚽ Liverpool App
 
 Aplicación web fullstack para gestionar jugadores del Liverpool FC. Permite crear, editar, buscar y eliminar jugadores, con validaciones robustas, diseño responsive y estructura escalable.
 
-##📦 Estructura del proyecto
+## 📦 Estructura del proyecto
 
 liverpool-app/ 
 ├── frontend-app/ # Frontend en Next.js + TailwindCSS 
@@ -10,21 +10,20 @@ liverpool-app/
 ├── .gitignore # Ignora node_modules, .env, etc. 
 └── README.md # Este archivo
 
-##🛠️ Tecnologías utilizadas
+## 🛠️ Tecnologías utilizadas
 
-- <u>[Next.js](https://nextjs.org/)</u> - Aplicaciones web con componentes React.
-#### React
-#### TailwindCSS
-####TypeScript
-####Inputs controlados y validaciones personalizadas
+- **<u>[Next.js](https://nextjs.org/)</u>** - Aplicaciones web con componentes React.
+- **<u>[React](https://es.react.dev)</u>** - Una biblioteca para interfaces de usuario web y nativas.
+- **<u>[TailwindCSS](https://tailwindcss.com/)</u>** - Un framework CSS orientado a utilidades para construir diseños personalizados de forma rápida.
+- **<u>[TypeScript](https://typescriptlang.org/)</u>** - Superset de JavaScript que agrega sintaxis para tipos estáticos.
+- **<u>[Axios](https://axios-http.com/)</u>** - Cliente HTTP basado en promesas para el navegador y Node.js.
+- **<u>[Node.js](https://nodejs.org/)</u>** - Entorno de ejecución de JavaScript.
+- **<u>[Express](https://expressjs.com/)</u>** - Framework web minimalista y flexible para Node.js.
+- **<u>[MongoDB](https://www.mongodb.com/)</u>** - Base de datos NoSQL.
+- **<u>[Mongoose](https://mongoosejs.com/)</u>** - Librería ODM (Object Data Modeling) para MongoDB y Node.js.
+- **<u>[express-validator](https://express-validator.github.io/docs)</u>** - Middleware para Express.js que permite validar y sanitizar datos de entrada.
 
-###Backend:
 
-Node.js
-Express
-MongoDB
-Mongoose
-express-validator
 🛠️ Instalación
 
 $ git clone https://github.com/tu-usuario/liverpool-app.git cd liverpool-app
