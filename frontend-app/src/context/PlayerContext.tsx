@@ -29,7 +29,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const readPlayers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/player");
+        const res = await axios.get("https://liverpool-app.onrender.com/player");
         setPlayers(res.data);
       } catch (error) {
         console.error("Error al obtener jugadores:", error);
