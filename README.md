@@ -1,4 +1,3 @@
-
 #⚽ Liverpool App
 
 Aplicación web fullstack para gestionar jugadores del Liverpool FC. Permite crear, editar, buscar y eliminar jugadores, con validaciones robustas, diseño responsive y estructura escalable.
@@ -11,11 +10,9 @@ liverpool-app/
 ├── .gitignore # Ignora node_modules, .env, etc. 
 └── README.md # Este archivo
 
-##🚀 Tecnologías utilizadas
+##🛠️ Tecnologías utilizadas
 
-###Frontend:
-
-####Next.js
+- <u>[Next.js](https://nextjs.org/)</u> - Aplicaciones web con componentes React.
 #### React
 #### TailwindCSS
 ####TypeScript
