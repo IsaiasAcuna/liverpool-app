@@ -1,0 +1,35 @@
+# Node modules
+**/node_modules/
+
+# Entornos
+**/.env
+**/.env.local
+**/.env.production
+**/.env.development
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Compilados y temporales
+dist/
+build/
+.next/
+out/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Coverage
+coverage/
+
+# Otros
+*.tgz
+*.zip

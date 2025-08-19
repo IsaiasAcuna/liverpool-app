@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.scrollbar-none {
+  overflow-x: scroll; /* o auto */
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.akakrica {
+  background-color: rgba(0, 0, 0, 0.509);
+  
+}
