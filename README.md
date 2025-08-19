@@ -1,13 +1,13 @@
-# ⚽ Liverpool App
+## ⚽ Liverpool App
 
 Aplicación web fullstack para gestionar jugadores del Liverpool FC. Permite crear, editar, buscar y eliminar jugadores, con validaciones robustas, diseño responsive y estructura escalable.
 
 ## 📦 Estructura del proyecto
 
-liverpool-app/ 
-├── frontend-app/ # Frontend en Next.js + TailwindCSS 
-├── backend-app/ # Backend en Node.js + Express + MongoDB 
-├── .gitignore # Ignora node_modules, .env, etc. 
+liverpool-app/ <br>
+├── frontend-app/ # Frontend en Next.js + TailwindCSS <br>
+├── backend-app/ # Backend en Node.js + Express + MongoDB <br>
+├── .gitignore # Ignora node_modules, .env, etc. <br>
 └── README.md # Este archivo
 
 ## 🛠️ Tecnologías utilizadas
@@ -24,11 +24,32 @@ liverpool-app/
 - **<u>[express-validator](https://express-validator.github.io/docs)</u>** - Middleware para Express.js que permite validar y sanitizar datos de entrada.
 
 
-🛠️ Instalación
+## 🚀 Instalación
 
-$ git clone https://github.com/tu-usuario/liverpool-app.git cd liverpool-app
+Tu necesitaras:
+- [Node.js 18+ (recomendado 20 LTS)](https://nodejs.org/).
+- [Git](https://git-scm.com/downloads).
+  
 
-Instalar dependencias: cd client && npm install cd ../server && npm install
+1. Abrí la terminal (o consola) y escribí este comando para copiar el proyecto a tu computadora:
+
+```bash
+git clone https://github.com/tu-usuario/liverpool-app.git
+```
+2. Cada parte del proyecto tiene sus propias herramientas. Tenés que instalar las dependencias en ambas carpetas. <br>
+
+- 🔧 Frontend
+
+```bash
+cd frontend-app
+npm install
+```
+- 🔧 Backend
+
+```bash
+cd backend-app
+npm install
+```
 
 Configurar variables de entorno: Crear archivos .env en client/ y server/ basados en los .env.example
 
