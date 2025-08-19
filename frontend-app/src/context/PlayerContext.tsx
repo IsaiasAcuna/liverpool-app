@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import axios from "axios";
+import api from '@/lib/api';
 
 type Player = {
       firstName: string,
@@ -29,7 +30,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const readPlayers = async () => {
       try {
-        const res = await axios.get("https://liverpool-app.onrender.com/player");
+        const res = await api.get("/player");
         setPlayers(res.data);
       } catch (error) {
         console.error("Error al obtener jugadores:", error);
