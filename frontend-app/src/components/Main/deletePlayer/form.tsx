@@ -1,6 +1,5 @@
-import { strict } from "assert";
-import axios from "axios";
 import { useState, useEffect } from "react";
+import api from "@/lib/api";
 
 type Player = {
     _id: string,
@@ -26,12 +25,9 @@ const FormForDeletePlayers: React.FC<FormProps> = ({ closeModal }) => {
     const handleSearch = async () => {
         try {
             const inputPlayer: string = capitalizarPrimeraLetra(inputValue)
-            const res = await axios.get(`http://localhost:5000/player/${inputPlayer}`);
+            const res = await api.get(`/player/${inputPlayer}`);
             setSearchPlayer(res.data);
-            console.log(res.data);
-            console.log(searchPlayer);
         } catch (err) {
-            console.error('Jugador no encontrado:', err)
             alert("jugador no encontrado" + player);
         }
     }
@@ -52,15 +48,14 @@ const FormForDeletePlayers: React.FC<FormProps> = ({ closeModal }) => {
     const handleSubmit = async () => {
 
         try {
-            const res = await axios.delete(`http://localhost:5000/player/${player._id}`);
-            console.log("Jugador eliminado:", res.data);
+            const res = await api.delete(`/player/${player._id}`);
+            alert("Jugador eliminado");
+            closeModal?.();
             window.location.reload()
         } catch (err) {
             console.error("Error al eliminar:");
         }
 
-        alert("Jugador eliminado");
-        closeModal?.();
     };
 
 

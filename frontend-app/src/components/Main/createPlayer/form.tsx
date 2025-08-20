@@ -57,15 +57,14 @@ const FormForPlayers: React.FC<FormProps> = ({ closeModal }) => {
 
   const handleSubmit = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/player", player);
+      const res = await api.post("/player", player);
       alert("Jugador Creado con exito");
       closeModal?.();
       window.location.reload()
     } catch (error) {
-      console.error("Error al enviar:", error); // ✔️ nombre correcto
+      console.error("Error al enviar:", error);
       if (axios.isAxiosError(error) && error.response?.data?.errors) {
         setErrores(error.response.data.errors);
-        console.log("Respuesta del error:", error.response?.data);
       } else {
         setErrores([{ msg: 'Error inesperado del servidor' }]);
       }

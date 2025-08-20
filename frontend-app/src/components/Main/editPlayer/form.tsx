@@ -1,6 +1,7 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
 import InputField from "./inputs";
+import api from "@/lib/api";
+import axios from "axios";
 
 type Player = {
 	_id: string,
@@ -31,7 +32,7 @@ const FormForEditPlayers: React.FC<FormProps> = ({ closeModal }) => {
 	const handleSearch = async () => {
 		try {
 			const inputPlayer: string = capitalizarPrimeraLetra(inputValue)
-			const res = await axios.get(`http://localhost:5000/player/${inputPlayer}`);
+			const res = await api.get(`/player/${inputPlayer}`);
 			setSearchPlayer(res.data);
 
 		} catch (err) {
@@ -71,18 +72,16 @@ const FormForEditPlayers: React.FC<FormProps> = ({ closeModal }) => {
 	const handleSubmit = async () => {
 
 		try {
-			const res = await axios.put(`http://localhost:5000/player/${player._id}`, player);
-			console.log("Jugador enviado:");
+			const res = await api.put(`/player/${player._id}`, player);
 			alert("Jugador Editado con éxito");
 			closeModal?.()
 			window.location.reload();
 
 		}
 		catch (error) {
-			console.error("Error al enviar:", error); // ✔️ nombre correcto
+			console.error("Error al enviar:", error);
 			if (axios.isAxiosError(error) && error.response?.data?.errors) {
 				setErrores(error.response.data.errors);
-				console.log("Respuesta del error:", error.response?.data);
 			} else {
 				setErrores([{ msg: 'Error inesperado del servidor' }]);
 			}
@@ -90,9 +89,6 @@ const FormForEditPlayers: React.FC<FormProps> = ({ closeModal }) => {
 
 		
 	};
-
-	console.log(errores);
-	
 
 	return (
 		<form onSubmit={(e) => {
