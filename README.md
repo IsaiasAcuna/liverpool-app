@@ -1,6 +1,6 @@
 ## ⚽ Liverpool App
 
-Aplicación web fullstack para gestionar jugadores del Liverpool FC. Permite crear, editar, buscar y eliminar jugadores, con validaciones robustas, diseño responsive y estructura escalable.
+Aplicación web fullstack para gestionar jugadores del Liverpool FC. Permite crear, editar, buscar y eliminar jugadores con validaciones robustas.
 
 ## 📦 Estructura del proyecto
 
@@ -38,55 +38,68 @@ git clone https://github.com/tu-usuario/liverpool-app.git
 ```
 2. Cada parte del proyecto tiene sus propias herramientas. Tenés que instalar las dependencias en ambas carpetas. <br>
 
-- 🔧 Frontend
+- 🔧 **Frontend**
 
 ```bash
 cd frontend-app
 npm install
 ```
-- 🔧 Backend
+- 🔧 **Backend**
 
 ```bash
 cd backend-app
 npm install
 ```
 
-Configurar variables de entorno: Crear archivos .env en client/ y server/ basados en los .env.example
+3. Configurar variables de entorno: Crear archivos .env en frontend-app/ y backend-app/ con esta estructura.
 
-client/.env: NEXT_PUBLIC_API_URL=http://localhost:4000
+- **Frontend** (.env)
 
-server/.env: PORT=4000 MONGO_URI=mongodb://localhost:27017/liverpool
+``` 
+NEXT_PUBLIC_API_URL=http://localhost:4000
+```
 
-▶️ Scripts
+- **Backend** (.env)
 
-Frontend: cd client npm run dev
+```
+PORT=4000
+MONGO_URI=mongodb://localhost:27017/liverpool
+```
 
-Backend: cd server npm run dev
+## ▶️ Scripts
 
-✅ Funcionalidades
+- Frontend
 
-Crear, editar y eliminar jugadores
-Búsqueda con filtros dinámicos
-Validaciones en frontend y backend
-Traducción/localización de datos
-Diseño responsive y accesible
-Modularidad y escalabilidad
-📁 Estructura recomendada
+```
+cd frontend-app && npm run dev
+```
 
-Frontend: client/ ├── components/ │ ├── PlayerForm/ │ ├── PlayerCard/ │ └── ... ├── pages/ ├── utils/ └── styles/
+- Backend
 
-Backend: server/ ├── routes/ ├── controllers/ ├── models/ ├── middlewares/ └── validators/
+```
+cd backend-app && npm run dev
+```
 
-🧪 Testing y mejoras futuras
+## ✅ Funcionalidades
 
- Tests unitarios con Jest
- Autenticación y roles
- Paginación y ordenamiento
- Modo oscuro 🌙
-👨‍💻 Autor
+Crear, editar y eliminar jugadores.
+Búsqueda con filtros dinámicos.
+Validaciones en frontend y backend.
+Traducción/localización de datos.
+Modularidad y escalabilidad.
 
-Isaias Acuña — Desarrollador Fullstack MERN apasionado por la accesibilidad, la modularidad y la experiencia de usuario.
+## 🧪 Testing y mejoras futuras
 
-📄 Licencia
+ - Tests unitarios con Jest
+ - Validaciones en formularios
+ - Mobile responsive
+ - Modo oscuro
+ - Idioma Ingles
+
+## 👨‍💻 Autor
+
+**<u>[Isaias Acuña](https://express-validator.github.io/docs)</u>** - Desarrollador Fullstack MERN con +3 años de experiencia.
+
+## 📄 Licencia
 
 Este proyecto está bajo la licencia MIT.
